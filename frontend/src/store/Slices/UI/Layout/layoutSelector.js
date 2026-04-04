@@ -1,0 +1,1 @@
+export const LayoutSelector = (state)=> state.Layout;
