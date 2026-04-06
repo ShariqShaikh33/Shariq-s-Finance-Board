@@ -3,13 +3,13 @@ import AmountCard from '../AmountCard/AmountCard'
 
 function SummarySection(props) {
     console.log(props)
-    const {list, className} = props;
+    const {list, className, cardClass} = props;
 
   return (
     <div className={className}>
         {
             list.map((l)=>{
-                return <AmountCard key={l.id} title={l.name} value={l.value} />
+                return <AmountCard key={l.id} title={l.name} value={l.value} className={cardClass}/>
             })
         }
         

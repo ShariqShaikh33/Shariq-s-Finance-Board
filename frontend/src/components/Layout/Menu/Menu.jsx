@@ -5,7 +5,7 @@ import Menubutton from '../Menubutton/Menubutton'
 
 function Menu() {
   return (
-    <div className=' border h-full flex flex-col'>
+    <div className='flex flex-col gap-0.5 p-1'>
         
         {
             menuButtonsList.map((i)=>{

@@ -8,8 +8,8 @@ const DonutChartComponent = (props) => {
   const {data} = props;
 
   return (
-    <ResponsiveContainer width="50%" height={300}>
-      <PieChart>
+    <ResponsiveContainer width="38%" height={350} className="bg-(--panel-background) rounded-lg">
+      <PieChart className="flex">
         <Pie
           data={data}
           dataKey="value"
@@ -25,7 +25,7 @@ const DonutChartComponent = (props) => {
           ))}
         </Pie>
         <Tooltip formatter={(value) => `₹${value.toLocaleString()}`} />
-        <Legend />
+        <Legend/>
       </PieChart>
     </ResponsiveContainer>
   );

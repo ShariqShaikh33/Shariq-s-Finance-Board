@@ -11,16 +11,18 @@ import { Outlet } from 'react-router';
 
 function Transaction() {
   const {admin} = useSelector(LayoutSelector);
-  const {setHeading} = useHeading()
+  const {setHeading,setSubheading} = useHeading()
   console.log(admin);
     useEffect(()=>{
       setHeading("Transactions");
+      setSubheading("All your transactions")
     },[])
   return (
-    <div className='h-[85%] border flex flex-col justify-evenly overflow-auto'>
+    <div className='h-full pl-5 pr-9 flex flex-col justify-evenly overflow-auto'>
       <SearchSection/>
-      
+      <div className='w-full h-[80%] overflow-auto'>
       <Outlet></Outlet>
+      </div>
 
       {
         admin && <AdminSection/>

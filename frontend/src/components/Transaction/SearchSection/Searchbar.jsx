@@ -11,10 +11,10 @@ function Searchbar() {
     setSearchbar(value);
   }
   return (
-    <div>
+    <div className='w-[40%] h-10'>
         <input 
           type="text" 
-          className='border w-[50%]' 
+          className='border border-(--background) w-full h-full rounded-lg pl-3 ' 
           placeholder='Search Here'
           value = {searchbar}
           onChange={(e)=>setSearchbar(e.target.value)}  

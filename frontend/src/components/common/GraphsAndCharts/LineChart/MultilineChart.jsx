@@ -12,7 +12,7 @@ const MultilineChartComponent = () => {
   const top5 = allCategory.slice(0, 5).map((c) => c.name);
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="100%" height={350} className="bg-(--panel-background) rounded-lg">
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
         <XAxis dataKey="month" />

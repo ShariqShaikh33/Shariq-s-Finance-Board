@@ -8,7 +8,7 @@ import BarChartComponent from '../../components/common/GraphsAndCharts/BarChart/
 import MultilineChartComponent from '../../components/common/GraphsAndCharts/LineChart/MultilineChart';
 
 function Insight() {
-  const {setHeading} = useHeading()
+  const {setHeading,setSubheading} = useHeading()
   const {savingsRate, topCategory, monthOvermonthDiff, largestExpense, currentMonth} = useSelector(selectInsights)
   const insightList = [
     {"id":"1","name":"Top Spending Category","value":topCategory.name, "amount":topCategory.amount},
@@ -20,12 +20,13 @@ function Insight() {
 
   useEffect(()=>{
     setHeading("Insight");
+    setSubheading("This month at glance")
   },[])
 
   const donutData = useSelector(selectIncomeSources);
   return (
-    <div className='h-full'>
-      <SummarySection className="border flex justify-evenly w-full h-[30%]" list={insightList}/>
+    <div className='h-full p-5 flex flex-wrap gap-5 overflow-auto'>
+      <SummarySection className="flex justify-between w-full h-[20%]" cardClass="bg-(--panel-background) rounded-lg w-[23%] flex flex-col justify-center gap-2 items-center" list={insightList}/>
       <DonutChartComponent data={donutData}/>
       <BarChartComponent/>
       <MultilineChartComponent/>

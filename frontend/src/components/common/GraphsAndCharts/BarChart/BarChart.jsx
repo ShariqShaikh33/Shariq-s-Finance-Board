@@ -6,7 +6,7 @@ const BarChartComponent = () => {
   const data = useSelector(selectMonthlySummary);
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="60%" height={350} className="bg-(--panel-background) rounded-lg">
       <BarChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
         <XAxis dataKey="month" />

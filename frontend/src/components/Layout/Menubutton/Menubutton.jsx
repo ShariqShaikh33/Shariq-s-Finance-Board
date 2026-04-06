@@ -8,13 +8,13 @@ import { setLayoutKey } from '../../../store/Slices/UI/Layout/LayoutSlice';
 function Menubutton(props) {
   const navigate = useNavigate();
   const {name, id} = props;
-
+  const {heading} = useSelector(LayoutSelector)
   const onClick=(id)=>{
     navigate(id);
   }
 
   return (
-    <button id={id} onClick={()=>onClick(id)}>
+    <button id={id} className={`w-full h-12 rounded-md font-bold ${heading==name ? "bg-(--panel-background)": "bg-(--background)"}`} onClick={()=>onClick(id)}>
         {name}
     </button>
   )

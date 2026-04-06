@@ -6,7 +6,7 @@ const LineChartComponent = (props) => {
   const {data} = props;
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="100%" height={300} className="bg-(--panel-background) rounded-lg">
       <LineChart data={data}>
         <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
         <XAxis dataKey="month" />
@@ -18,7 +18,7 @@ const LineChartComponent = (props) => {
           stroke="#6366f1"
           strokeWidth={2}
           dot={{ r: 4 }}
-          activeDot={{ r: 6 }}
+          activeDot={{ r: 5 }}
         />
       </LineChart>
     </ResponsiveContainer>

@@ -14,7 +14,7 @@ function SortButton() {
 
   
   return (
-    <div>
+    <div className='w-[20%] flex justify-between'>
       <CustomSelectComponent optionlist={sortlist} setFunction={setSortBy} init="Sort by"></CustomSelectComponent>
       <CustomSelectComponent optionlist={Asc} setFunction={setAsc} init="Order"></CustomSelectComponent>
     </div>

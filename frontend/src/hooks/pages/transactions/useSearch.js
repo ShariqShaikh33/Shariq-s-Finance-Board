@@ -5,7 +5,7 @@ import { removeFilterAction } from "../../../store/Slices/UI/Search/Actions/remo
 
 export const useSearch = () => {
   const dispatch = useDispatch();
-  const { searchbar, filterbytype, filterbycategory, sortBy, asc } = useSelector(searchSelector);
+  const { searchbar, filterbytype, typeOpen,categoryOpen, filterbycategory, sortBy, asc } = useSelector(searchSelector);
 
   const setSearchbar = (value) => {
     dispatch(setSearchKey({ key: "searchbar", value }));
@@ -32,5 +32,15 @@ export const useSearch = () => {
     dispatch(setSearchKey({ key: "asc", value }));
   };
 
-  return { searchbar, filterbytype, filterbycategory, sortBy, asc, setSearchbar, addFilter, setSortBy, setAsc };
+  const setTypeOpen=()=>{
+    const value = !typeOpen;
+    dispatch(setSearchKey({key:"typeOpen",value}));
+  }
+
+  const setCategoryOpen=()=>{
+    const value = !categoryOpen;
+    dispatch(setSearchKey({key:"categoryOpen",value}));
+  }
+
+  return { searchbar, filterbytype, filterbycategory, sortBy, asc, typeOpen, categoryOpen, setSearchbar, addFilter, setSortBy, setAsc, setTypeOpen, setCategoryOpen };
 };

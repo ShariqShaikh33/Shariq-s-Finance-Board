@@ -9,7 +9,7 @@ import DonutChartComponent from '../../components/common/GraphsAndCharts/DonutCh
 import MultilineChartComponent from '../../components/common/GraphsAndCharts/LineChart/MultilineChart';
 
 function Overview() {
-    const {setHeading} = useHeading()
+    const {setHeading,setSubheading} = useHeading()
     const {totalBalance, totalIncome, totalExpenses} = useSelector(selectSummaryCards);
 
     const summaryList = [
@@ -21,11 +21,14 @@ function Overview() {
     const lineChartData = useSelector(selectBalanceTrend);
     useEffect(()=>{
       setHeading("Overview");
+      setSubheading("Summary of your Transactions")
     },[])
   return (
-    <div className='w-full h-full flex flex-wrap justify-between'>
-        <SummarySection list={summaryList} className="border h-20 w-[60%] flex justify-evenly" />
-        <SimpleTable/>
+    <div className='p-5 w-full flex flex-wrap gap-5 justify-between overflow-auto'>
+        <div className='flex flex-col gap-5 justify-between items-center w-[60%]'>
+          <SummarySection list={summaryList} className="h-30 w-full bg-(--background) flex justify-between" cardClass="bg-(--panel-background) rounded-lg w-[32%] flex flex-col justify-center gap-2 items-center "/>
+          <SimpleTable/>  
+        </div>
         <DonutChartComponent data={donutData}/>
         <LineChartComponent data={lineChartData}/>
     </div>

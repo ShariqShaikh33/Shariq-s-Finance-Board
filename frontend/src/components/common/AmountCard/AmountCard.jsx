@@ -1,10 +1,10 @@
 import React from 'react'
 
 function AmountCard(props) {
-    const {title,value} = props
+    const {title,value,className} = props
   return (
-    <div className='border w-50 flex flex-col justify-center gap-2 items-center'>
-        <div>{title}</div>
+    <div className={className}>
+        <div className='text-2xl text-(--primary) font-bold border-b border-(--background) w-full text-center '>{title}</div>
         <div>{value}</div>
     </div>
   )

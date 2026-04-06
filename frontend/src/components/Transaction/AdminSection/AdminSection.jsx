@@ -6,12 +6,13 @@ function AdminSection() {
   const onClick=(page)=>{
     navigate(`/${page}`);
   }
+  const classname = "border w-40 bg-(--panel-background) border-(--background)"
   return (
     <div className='w-full flex justify-evenly'>
 
-        <button onClick={()=>onClick("transaction/addtransaction")}>Add Transaction</button>
-        <button onClick={()=>onClick("transaction")}>Table</button>
-        <button onClick={()=>onClick("transaction/edittransaction")}>Edit Transaction</button>
+        <button className={classname} onClick={()=>onClick("transaction/addtransaction")}>Add Transaction</button>
+        <button className={classname} onClick={()=>onClick("transaction")}>Table</button>
+        <button className={classname} onClick={()=>onClick("transaction/edittransaction")}>Edit Transaction</button>
     </div>
   )
 }

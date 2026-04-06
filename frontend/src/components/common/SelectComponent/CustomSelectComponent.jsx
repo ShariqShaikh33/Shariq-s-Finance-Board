@@ -7,7 +7,7 @@ function CustomSelectComponent(props) {
         setFunction(value);
     }
   return (
-    <select onChange={(e)=>onChange(e.target.value)}>
+<select className='border h-10 border-(--background) w-25' onChange={(e)=>onChange(e.target.value)}>
         <option value="0">{init}</option>
         {
             optionlist.map((l)=>{
