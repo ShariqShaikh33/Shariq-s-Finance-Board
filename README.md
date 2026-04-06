@@ -5,6 +5,7 @@ A clean and interactive personal finance dashboard built as part of a frontend i
 
 ## Live Demo
 
+"https://shariq-s-finance-board.vercel.app/"
 
 ---
 
