@@ -1,16 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { transactionSelector } from '../../store/Slices/Transaction/transactionSelector'
+import { selectFilteredTransactions, transactionSelector } from '../../store/Slices/Transaction/transactionSelector'
 import TransactionCard from './TransactionCard'
 
 function TransactionTable() {
-    const list = useSelector(transactionSelector)
+    const list = useSelector(selectFilteredTransactions)
     console.log(list)
   return (
     <div className='border w-full h-[80%] overflow-y-auto'>
         {
             list.map((t)=>{
-                return <TransactionCard/>
+                return <TransactionCard key={t.id} amount={t.amount}/>
             })
         }
     </div>

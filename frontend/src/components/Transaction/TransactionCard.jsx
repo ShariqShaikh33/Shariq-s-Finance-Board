@@ -1,8 +1,9 @@
 import React from 'react'
 
-function TransactionCard() {
+function TransactionCard(props) {
+  const {amount} = props
   return (
-    <div className='border'>TransactionCard</div>
+    <div className='border'>{amount}</div>
   )
 }
 

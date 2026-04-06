@@ -8,7 +8,6 @@ function SearchSection() {
   return (
     <div className='flex gap-5 w-full border justify-evenly'>
         <Searchbar/>
-        <SearchButton/>
         <FilterButton/>
         <SortButton/>
     </div>

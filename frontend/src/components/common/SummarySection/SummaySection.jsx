@@ -2,7 +2,9 @@ import React from 'react'
 import AmountCard from '../AmountCard/AmountCard'
 
 function SummarySection(props) {
+    console.log(props)
     const {list, className} = props;
+
   return (
     <div className={className}>
         {

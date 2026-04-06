@@ -3,4 +3,5 @@ export const layoutInitialState = {
     currentPage: "",
     heading: "",
     subheading: "",
+    admin: false,
     }

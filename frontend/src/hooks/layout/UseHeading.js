@@ -4,7 +4,7 @@ import { setLayoutKey } from "../../store/Slices/UI/Layout/LayoutSlice";
 
 export const useHeading = () => {
   const dispatch = useDispatch();
-  const { heading, subheading } = useSelector(LayoutSelector);
+  const { heading, subheading, admin } = useSelector(LayoutSelector);
 
   const setHeading = (value) => {
     dispatch(setLayoutKey({ key: "heading", value }));
@@ -14,5 +14,10 @@ export const useHeading = () => {
     dispatch(setLayoutKey({ key: "subheading", value }));
   };
 
-  return { heading, subheading, setHeading, setSubheading };
+  const setAdmin = () => {
+    const value= !admin;
+    dispatch(setLayoutKey({ key: "admin", value }));
+  };
+
+  return { heading, subheading, admin, setHeading, setSubheading, setAdmin };
 };
