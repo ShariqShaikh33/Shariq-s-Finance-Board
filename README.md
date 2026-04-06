@@ -12,8 +12,13 @@ A clean and interactive personal finance dashboard built as part of a frontend i
 ## Tech Stack
 
 | Purpose | Technology |
+
 | Framework | React 18 (Vite) |
+
 | State management | Redux Toolkit |
+
 | Styling | Tailwind CSS |
+
 | Charts | Recharts |
+
 | Routing | React Router DOM |
